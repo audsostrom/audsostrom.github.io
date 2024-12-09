@@ -1,7 +1,14 @@
+import Navbar from "./components/navbar";
 import type { Metadata } from "next";
-import { Inter } from 'next/font/google';
+import { IBM_Plex_Sans, Inter } from 'next/font/google';
 import { Theme } from "@radix-ui/themes";
 import "./globals.css";
+
+const sans = IBM_Plex_Sans({
+  weight: ['400'],
+  subsets: ['latin'],
+  variable: '--font-ibm-plex-sans'
+})
 
 const inter = Inter({
   subsets: ['latin'], // Load specific character subsets
@@ -22,9 +29,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} antialiased`}
+        className={`gradient ${inter.variable} ${sans.variable} antialiased`}
       >
-              <Theme>
+              <Theme hasBackground={false}>
+              <Navbar />
               {children}
               </Theme>
       </body>

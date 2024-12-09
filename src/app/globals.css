@@ -1,10 +1,15 @@
+@import "@radix-ui/themes/styles.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import "@radix-ui/themes/styles.css";
 
-.gradient {
+.radix-themes {
+	--default-font-family: var(--font-inter);
+  --background: none; /* Override Radix's background variable */
+}
+
+body {
   color: var(--foreground);
   background: linear-gradient(
     -45deg,
@@ -19,7 +24,7 @@
     #d5f9ff
   ) !important;
   background-size: 600% 600%; /* Increased size for smoother transition */
-  animation: gradient 15s ease-in-out infinite; /* Slower and smoother animation */
+  animation: anim 2s ease-in-out infinite; /* Slower and smoother animation */
 }
 
 @keyframes wave {
@@ -46,7 +51,7 @@
   }
 }
 
-@keyframes gradient {
+@keyframes anim {
   0% {
     background-position: 0% 50%;
   }

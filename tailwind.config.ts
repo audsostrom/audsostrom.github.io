@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        accent: "var(--font-ibm-plex-sans)"
+      }
     },
   },
   plugins: [],

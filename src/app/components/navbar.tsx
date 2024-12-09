@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-end items-center px-8 py-4 bg-transparent">
+    <nav className="flex justify-end items-center px-8 py-4 bg-transparent font-accent">
       <ul className="flex space-x-6">
         <li>
           <Link href="/background">

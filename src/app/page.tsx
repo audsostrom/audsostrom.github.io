@@ -4,13 +4,12 @@ import Navbar from './components/navbar';
 
 export default function Home() {
   return (
-    <div className="gradient min-h-screen">
-      <Navbar />
-      <main className="flex flex-col justify-center px-20 h-[calc(100vh-108px-2rem)]">
+    <div className="h-[calc(100vh-56px)] overflow-hidden">
+      <main className="flex flex-col justify-center px-20 h-[calc(100vh-100px-4rem)]">
         <h1 className="text-4xl font-bold text-gray-800">
           hello there <span role="img" aria-label="wave" className="wave">👋</span>
         </h1>
-        <h2 className="text-6xl font-extrabold text-purple-600 mt-4">
+        <h2 className="text-6xl font-extrabold text-purple-600 mt-4 font-accent">
           I'm Audrey
         </h2>
         <p className="text-2xl text-gray-600 mt-4">
@@ -24,7 +23,7 @@ export default function Home() {
         {/* GitHub Link */}
         <Tooltip.Provider>
     <Tooltip.Root>
-      <Tooltip.Trigger className="text-black px-4 py-2">
+      <Tooltip.Trigger className="text-black px-4 py-2 hover:text-purple-600">
       <GitHubLogoIcon className='size-7'/>
       </Tooltip.Trigger>
       <Tooltip.Portal>
@@ -38,7 +37,7 @@ export default function Home() {
       </Tooltip.Portal>
     </Tooltip.Root>
     <Tooltip.Root>
-      <Tooltip.Trigger className="text-black px-4 py-2">
+      <Tooltip.Trigger className="text-black px-4 py-2 hover:text-purple-600">
       <LinkedInLogoIcon className='size-7'/>
       </Tooltip.Trigger>
       <Tooltip.Portal>
