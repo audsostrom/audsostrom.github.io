@@ -2,20 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import "@radix-ui/themes/styles.css";
+
+.gradient {
+  color: var(--foreground);
+  background: linear-gradient(
+    -45deg,
+    #ffffff,
+    #ffe4e9,
+    #fcc8e2,
+    #f6baed,
+    #efb0ff,
+    #d3a2ff,
+    #8eb8ff,
+    #91efff,
+    #d5f9ff
+  ) !important;
+  background-size: 600% 600%; /* Increased size for smoother transition */
+  animation: gradient 15s ease-in-out infinite; /* Slower and smoother animation */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 25% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  75% {
+    background-position: 75% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.wave {
+  display: inline-block;
+  transform-origin: 70% 70%; /* Pivot point for waving effect */
+  animation: wave 4s ease-in-out infinite; /* Longer duration for smoother wave */
 }

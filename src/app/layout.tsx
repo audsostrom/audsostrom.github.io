@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Inter } from 'next/font/google';
+import { Theme } from "@radix-ui/themes";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const inter = Inter({
+  subsets: ['latin'], // Load specific character subsets
+  variable: '--font-inter', // Add as a CSS variable (optional)
+  display: 'swap',         // Use swap for better loading performance
 });
 
 export const metadata: Metadata = {
@@ -26,9 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} antialiased`}
       >
-        {children}
+              <Theme>
+              {children}
+              </Theme>
       </body>
     </html>
   );
