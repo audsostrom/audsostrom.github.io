@@ -29,7 +29,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`gradient ${inter.variable} ${sans.variable} antialiased`}
+        className={`${inter.variable} ${sans.variable} antialiased`}
+        style={{
+          background: "linear-gradient(-45deg, #ffffff, #ffe4e9, #fcc8e2, #f6baed, #efb0ff, #d3a2ff, #8eb8ff, #91efff, #d5f9ff)",
+          backgroundSize: "200% 200%",
+          animation: "anim 15s ease infinite",
+          overflowY: "hidden"
+        }}
       >
               <Theme hasBackground={false}>
               <Navbar />

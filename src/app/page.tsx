@@ -1,6 +1,5 @@
 import * as Tooltip from '@radix-ui/react-tooltip';
 import { GitHubLogoIcon, LinkedInLogoIcon, PlusIcon } from '@radix-ui/react-icons';
-import Navbar from './components/navbar';
 
 export default function Home() {
   return (
