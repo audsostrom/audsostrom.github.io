@@ -16,7 +16,7 @@ export default function Projects() {
       date: "Nov 2024, submitted for Brainrot Hackathon",
       builtWith: "Built with Next.JS, MongoDB, TailwindCSS, and Radix UI using open-source HuggingFace AI models.",
       images: [
-       "/audsostrom.github.io/fizzbruzz.png",
+       "/fizzbruzz.png",
       ],
       badges: ["Full-stack Development"],
       type: 'desktop',
@@ -27,11 +27,11 @@ export default function Projects() {
       date: "Apr 2024, submitted for LA Hacks",
       builtWith: "Built with React Native, Firebase, and Google Gemini.",
       images: [
-        "/audsostrom.github.io/flora-fit.svg",
-        "/audsostrom.github.io/flora-map.svg",
-        "/audsostrom.github.io/root-route.svg",
-        "/audsostrom.github.io/journaling.svg",
-        "/audsostrom.github.io/raid-screen.svg",
+        "/flora-fit.svg",
+        "/flora-map.svg",
+        "/root-route.svg",
+        "/journaling.svg",
+        "/raid-screen.svg",
       ],
       badges: ["Full-stack Development", "UI/UX Design"],
       type: 'mobile',
@@ -42,8 +42,8 @@ export default function Projects() {
       date: "Jan - May 2024",
       builtWith: "Built with Next.JS, MongoDB, and Material UI using open-source HuggingFace AI models.",
       images: [
-        "/audsostrom.github.io/dishdelish.png",
-        "/audsostrom.github.io/recipe.png",
+        "/dishdelish.png",
+        "/recipe.png",
       ],
       badges: ["Back-end Engineering", "UI/UX Design"],
       type: 'desktop',
@@ -54,9 +54,9 @@ export default function Projects() {
       date: "Mar - Jun 2023",
       builtWith: "Built in Python using PyTorch, Pandas, and Tkinter.",
       images: [
-        "/audsostrom.github.io/mice-sleep.jpg",
-        "/audsostrom.github.io/architecture.png",
-        "/audsostrom.github.io/results.png",
+        "/mice-sleep.jpg",
+        "/architecture.png",
+        "/results.png",
       ],
       badges: ["Data Science"],
       type: 'desktop',
@@ -67,7 +67,7 @@ export default function Projects() {
     <div className="h-[calc(100vh-56px)] overflow-hidden p-8 text-black overflow-y-auto">
       <div className="mb-8">
       <div className="flex gap-4">
-      <Image width='32' height='32' src='/audsostrom.github.io/smiski.png' alt='smiski computer guy'/>
+      <Image width='32' height='32' src='/smiski.png' alt='smiski computer guy'/>
           <h1 className="text-4xl font-bold">
           projects
           </h1>

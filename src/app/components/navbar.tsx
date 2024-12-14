@@ -21,7 +21,7 @@ const Navbar = () => {
         </li>
         <li>
         <a
-          href="/audsostrom.github.io/Resume-AudreyOstrom.pdf"
+          href="/Resume-AudreyOstrom.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-800 hover:text-purple-600"

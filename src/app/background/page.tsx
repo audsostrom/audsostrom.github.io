@@ -8,49 +8,49 @@ export default function Background() {
       title: "Research Development Lead",
       date: "Mar 2023 - Present",
       description: "",
-      image: "/audsostrom.github.io/tech4good.png",
+      image: "/tech4good.png",
     },
     {
       company: "Sorbet",
       title: "Full-Stack Engineer Intern",
       date: "Sep 2023 - Present",
       description: "",
-      image: "/audsostrom.github.io/sorbet.svg",
+      image: "/sorbet.svg",
     },
     {
       company: "UCSC Open Source Program Office",
       title: "Software Developer Intern",
       date: "Sep 2023 - Present",
       description: "",
-      image: "/audsostrom.github.io/ospo.png",
+      image: "/ospo.png",
     },
     {
       company: "UCSC Baskin School of Engineering",
       title: "Teaching Assistant",
       date: "Jan 2022 - Sep 2024",
       description: "",
-      image: "/audsostrom.github.io/baskin-engineering.png",
+      image: "/baskin-engineering.png",
     },
     {
       company: "UCSC Baskin School of Engineering",
       title: "Grader",
       date: "Oct 2021 - Sep 2024",
       description: "",
-      image: "/audsostrom.github.io/baskin-engineering.png",
+      image: "/baskin-engineering.png",
     },
     {
       company: "GraceHacks",
       title: "Tech Director",
       date: "Jun 2023 - Jun 2024",
       description: "",
-      image: "/audsostrom.github.io/gracehacks.png",
+      image: "/gracehacks.png",
     },
     {
       company: "UCSC BluePrint",
       title: "Mobile Developer",
       date: "Jun 2023 - Jun 2024",
       description: "",
-      image: "/audsostrom.github.io/blueprint.png",
+      image: "/blueprint.png",
     },
   ];
 
@@ -58,7 +58,7 @@ export default function Background() {
     <div className="h-[calc(100vh-56px)] overflow-hidden p-8 text-black overflow-y-auto">
       <div className="mb-8">
           <div className="flex gap-4">
-          <Image width='32' height='32' src='/audsostrom.github.io/smiski.png' alt='smiski computer guy'/>
+          <Image width='32' height='32' src='/smiski.png' alt='smiski computer guy'/>
           <h1 className="text-4xl font-bold">
           work & extracurriculars
           </h1>
