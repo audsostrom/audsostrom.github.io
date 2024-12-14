@@ -18,10 +18,11 @@ export default function Projects() {
        "/audsostrom.github.io/fizzbruzz.png",
       ],
       badges: ["Full-stack Development"],
+      type: 'desktop',
     },
     {
       title: "Flora Fit",
-      description: "Pokemon Go-inspired app to get people to learn more about the environment.",
+      description: "Pokemon Go-inspired app to get people to learn more about the environment and be more cognizant of their mental health.",
       date: "Apr 2024, submitted for LA Hacks",
       builtWith: "Built with React Native, Firebase, and Google Gemini.",
       images: [
@@ -32,6 +33,7 @@ export default function Projects() {
         "/audsostrom.github.io/raid-screen.svg",
       ],
       badges: ["Full-stack Development", "UI/UX Design"],
+      type: 'mobile',
     },
     {
       title: "DishDelish",
@@ -43,6 +45,7 @@ export default function Projects() {
         "/audsostrom.github.io/recipe.png",
       ],
       badges: ["Back-end Engineering", "UI/UX Design"],
+      type: 'desktop',
     },
     {
       title: "CNN For Mice Sleep Analysis",
@@ -50,52 +53,52 @@ export default function Projects() {
       date: "Mar - Jun 2023",
       builtWith: "Built in Python using PyTorch, Pandas, and Tkinter.",
       images: [
-        "https://via.placeholder.com/150/800080",
-        "https://via.placeholder.com/150/FFFF00",
+        "/audsostrom.github.io/mice-sleep.jpg",
+        "/audsostrom.github.io/architecture.png",
+        "/audsostrom.github.io/results.png",
       ],
       badges: ["Data Science"],
+      type: 'desktop',
     },
   ];
 
   return (
-    <div className="h-screen p-8 text-black overflow-y-auto">
+    <div className="h-[calc(100vh-56px)] overflow-hidden p-8 text-black overflow-y-auto">
       <div className="mb-8">
         <h1 className="text-4xl font-bold">projects 👩🏼‍💻</h1>
         <p className="mt-4 text-gray-600 font-accent">
           Here are some of the projects I’ve worked on recently.
         </p>
       </div>
-      <div className="space-y-4 mb-24">
+      <div className="space-y-8 mb-24">
         {projects.map((project, index) => (
-          <Card
-            key={index}
-            size="2"
-            variant="surface"
-            className="p-5 h-100 bg-white rounded-lg shadow-lg"
-          >
-            <div className="flex gap-4">
-              {/* Shadcn Carousel for Images */}
-              <div className="h-64 rounded-lg">
-                <Carousel className="w-64" opts={{
+          <div key={index} className={`flex flex-wrap mb-24 gap-8 flex-col lg:flex-row`}>
+                        {/* Shadcn Carousel for Images */}
+                        <Carousel className='mx-16 lg:w-2/5' opts={{
     loop: true,
   }}>
-                  <CarouselContent className="h-64">
+                  <CarouselContent className="h-96 w-auto">
                     {project.images.map((image, idx) => (
-                      <CarouselItem key={idx}>
+                      <CarouselItem key={idx} className={`${project.type === 'mobile' ? 'md:basis-1/3' : ''}`}>
                         <img
                           src={image}
                           alt={`${project.title} image ${idx + 1}`}
-                          className="rounded-lg w-full h-full object-cover"
+                          className="rounded-lg w-full h-full object-contain"
                         />
                       </CarouselItem>
                     ))}
                   </CarouselContent>
+                  <CarouselPrevious/>
                   <CarouselNext />
                 </Carousel>
-              </div>
-
-              <div className="ml-16">
-                <div className="flex items-center gap-4">
+                    <Card
+            key={index}
+            size="1"
+            variant="surface"
+            className='flex flex-row items-center lg:w-1/2'
+          >
+              <div className="my-6 mx-20">
+                <div className="flex items-center gap-4 flex-wrap">
                   <h2 className="text-2xl font-bold">{project.title}</h2>
                   {project.badges.map((badge, badgeIndex) => (
                     <Badge
@@ -112,10 +115,10 @@ export default function Projects() {
                   <p className="text-gray-400">{project.builtWith}</p>
                 </div>
               </div>
-            </div>
           </Card>
+          </div>
         ))}
-        <div className="text-xs italic pt-4">And this website was built with Next.js, Tailwind, Radix UI, and Shadcn!</div>
+        <div className="text-xs text-center italic pt-16">And this website was built with Next.js, Tailwind, Radix UI, and Shadcn!</div>
       </div>
     </div>
   );
