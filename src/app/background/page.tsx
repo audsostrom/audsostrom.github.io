@@ -60,7 +60,7 @@ export default function Background() {
           <div className="flex gap-4">
           <Image width='32' height='32' src='/smiski.png' alt='smiski computer guy'/>
           <h1 className="text-4xl font-bold">
-          work & extracurriculars
+          work & extras
           </h1>
           </div>
         <p className="mt-4 text-gray-600 font-accent">
@@ -74,7 +74,7 @@ export default function Background() {
           key={index}
           size="1"
           variant="surface"
-          className='flex flex-row items-center gap-16 px-20'
+          className='flex flex-row items-center gap-4 sm:gap-16 px-4 sm:px-20'
         >
           <img
             src={work.image}
