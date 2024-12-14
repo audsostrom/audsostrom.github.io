@@ -1,4 +1,5 @@
 import { Card } from "@radix-ui/themes";
+import Image from "next/image";
 
 export default function Background() {
   const works = [
@@ -56,7 +57,12 @@ export default function Background() {
   return (
     <div className="h-[calc(100vh-56px)] overflow-hidden p-8 text-black overflow-y-auto">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold">work & extracurriculars 👩🏼‍💻</h1>
+          <div className="flex gap-4">
+          <Image width='32' height='32' src='/audsostrom.github.io/smiski.png' alt='smiski computer guy'/>
+          <h1 className="text-4xl font-bold">
+          work & extracurriculars
+          </h1>
+          </div>
         <p className="mt-4 text-gray-600 font-accent">
           Always staying involved.
         </p>
@@ -71,17 +77,17 @@ export default function Background() {
           className='flex flex-row items-center gap-16 px-20'
         >
           <img
-                          src={work.image}
-                          alt={`${work.title} image`}
-                          className="rounded-lg w-24 h-24 object-contain"
-                        />
+            src={work.image}
+            alt={`${work.title} image`}
+            className="rounded-lg w-24 h-24 object-contain"
+          />
 
-            <div className="my-6">
-            <div className="flex items-center gap-4">
-                  <h2 className="text-2xl"><b>{work.title},</b> {work.company}</h2>
-                </div>
-                <p className="text-gray-400 mt-1">{work.date}</p>
+          <div className="my-6">
+          <div className="flex items-center gap-4">
+                <h2 className="text-2xl"><b>{work.title},</b> {work.company}</h2>
               </div>
+              <p className="text-gray-400 mt-1">{work.date}</p>
+            </div>
         </Card>
         ))}
       </div>

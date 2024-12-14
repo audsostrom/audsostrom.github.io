@@ -1,4 +1,5 @@
 import { Badge, Card } from "@radix-ui/themes";
+import Image from "next/image";
 import {
   Carousel,
   CarouselContent,
@@ -65,9 +66,14 @@ export default function Projects() {
   return (
     <div className="h-[calc(100vh-56px)] overflow-hidden p-8 text-black overflow-y-auto">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold">projects 👩🏼‍💻</h1>
+      <div className="flex gap-4">
+      <Image width='32' height='32' src='/audsostrom.github.io/smiski.png' alt='smiski computer guy'/>
+          <h1 className="text-4xl font-bold">
+          projects
+          </h1>
+          </div>
         <p className="mt-4 text-gray-600 font-accent">
-          Here are some of the projects I’ve worked on recently.
+          Here are some of the projects I&apos;ve worked on recently.
         </p>
       </div>
       <div className="space-y-8 mb-24">
