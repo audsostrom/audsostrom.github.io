@@ -95,7 +95,7 @@ export default function Projects() {
       badges: ["Front-end Development", "UI/UX Design"],
       type: 'mobile',
       figmaLink: 'https://www.figma.com/design/ushuElFlfVrR0G3Wt9BCV3/JusticeNav?node-id=407-430&t=RCYK7Vigt7xAfqUv-0',
-      githubLink: 'https://github.com/audsostrom/dishdelish',
+      githubLink: 'https://github.com/audsostrom/gdsc-legal-app',
     },
     {
       title: "CNNs and RNNs For Mice Sleep Analysis",
