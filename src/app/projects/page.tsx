@@ -152,7 +152,7 @@ export default function Projects() {
                         <img
                           src={image}
                           alt={`${project.title} image ${idx + 1}`}
-                          className="rounded-lg w-full h-full object-contain"
+                          className="rounded-lg w-full h-96 object-contain"
                         />
                       </CarouselItem>
                     ))}
