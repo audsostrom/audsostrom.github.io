@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/carousel"; // Make sure to import the correct components
 import { FigmaLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import { YoutubeIcon } from "lucide-react";
-import { Crown } from "lucide-react";
 import { Newspaper } from "lucide-react";
 import { ImageIcon } from "lucide-react";
 
@@ -31,7 +30,7 @@ export default function Projects() {
     {
       title: "Flora Fit",
       description: "An adventure app that inspires exploration, environmental awareness, and mental wellness. As players travel in nature, they're encouraged to reflect and engage with their world around them with tailored journal prompts using Gemini. When they do so, they given seeds which they can then grow and evolve to learn more about plants indigenous to the player's area and what invasive species are nearby.",
-      date: "Apr 2024, submitted for LA Hacks",
+      date: "Apr 2024, submitted for LA Hacks a part of a team of 4",
       builtWith: "Built with React Native, Firebase, and Google Gemini.",
       images: [
         "/flora-fit.svg",
