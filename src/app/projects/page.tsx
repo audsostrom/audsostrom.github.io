@@ -62,7 +62,7 @@ export default function Projects() {
     },
     {
       title: "CNN For Mice Sleep Analysis",
-      description: "Predictor for sleep stages in mice.",
+      description: "Predictor for sleep stages in mice using convolutional neural networks (CNNs), based on datasets of EEG and EMG data collected at Zuo Labs.",
       date: "Mar - Jun 2023",
       builtWith: "Built in Python using PyTorch, Pandas, and Tkinter.",
       images: [
@@ -141,9 +141,9 @@ export default function Projects() {
         {project.youtubeLink && <Link  href={project.youtubeLink} rel="noopener noreferrer" target="_blank">
       <YoutubeIcon className='size-5'/>
         </Link>}
-        {project.devpostLink && <Link  href={project.devpostLink} rel="noopener noreferrer" target="_blank">
+        {/** project.devpostLink && <Link  href={project.devpostLink} rel="noopener noreferrer" target="_blank">
       <Crown className='size-5'/>
-        </Link>}
+        </Link> */}
         {project.paperLink && <Link  href={project.paperLink} rel="noopener noreferrer" target="_blank">
       <Newspaper className='size-5'/>
         </Link>}
