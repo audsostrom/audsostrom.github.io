@@ -47,8 +47,8 @@ export default function Projects() {
     {
       title: "Flora Fit",
       description: "An adventure app that inspires exploration, environmental awareness, and mental wellness. As players travel in nature, they're encouraged to reflect and engage with their world around them with tailored journal prompts using Gemini. When they do so, they given seeds which they can then grow and evolve to learn more about plants indigenous to the player's area and what invasive species are nearby.",
-      date: "Apr 2024, submitted for LA Hacks a part of a team of 4",
-      builtWith: "Built with React Native, Firebase, and Google Gemini.",
+      date: "Apr 2024",
+      builtWith: "Built with React Native, Firebase, and Google Gemini. Submitted for LA Hacks a part of a team of 4.",
       images: [
         "/flora-fit.svg",
         "/flora-map.svg",
@@ -62,6 +62,7 @@ export default function Projects() {
       figmaLink: 'https://www.figma.com/design/znQMf3sQG5IyTKSn0B6J7u/Flora-Fit-Figma?node-id=0-1&t=7Y1kREYfFo3zxHcs-1',
       youtubeLink: 'https://youtu.be/zV-ObX7yRm8',
     },
+
     {
       title: "DishDelish",
       description: "Never let food go to waste again. Using the ingredients you already have, you're matched with recipes that best match your pantry and preferences using AI to augment results.",
@@ -71,10 +72,29 @@ export default function Projects() {
         "/dishdelish.png",
         "/recipe.png",
       ],
-      badges: ["Back-end Engineering", "UI/UX Design"],
+      badges: ["Back-end Development", "UI/UX Design"],
       type: 'desktop',
       siteLink: 'https://dishdelish.vercel.app/',
       figmaLink: 'https://www.figma.com/file/OfIogM0BU2t5Mtn3DQ9ZJ9/DishDelish-Figma?type=design&node-id=0%3A1&mode=design&t=0iplRGkv9s0KNw9u-1',
+      githubLink: 'https://github.com/audsostrom/dishdelish',
+    },
+    {
+      title: "JusticeNav",
+      description: "JusticeNav aims to empower new immigrants to the United States by providing them with easily accessible legal information and resources.",
+      date: "Jan - Mar 2024",
+      builtWith: "Built with Angular and Firebase. Submitted for GDSC with as part of a team of 6.",
+      images: [
+        "/justicenav-title.png",
+        "/justicenav-home.png",
+        "/justicenav-english1.png",
+        "/justicenav-english2.png",
+        "/justicenav-quiz.png",
+        "/justicenav-success.png",
+        "/justicenav-spanish.png",
+      ],
+      badges: ["Front-end Development", "UI/UX Design"],
+      type: 'mobile',
+      figmaLink: 'https://www.figma.com/design/ushuElFlfVrR0G3Wt9BCV3/JusticeNav?node-id=407-430&t=RCYK7Vigt7xAfqUv-0',
       githubLink: 'https://github.com/audsostrom/dishdelish',
     },
     {
