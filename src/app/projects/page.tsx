@@ -11,6 +11,7 @@ import { FigmaLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import { YoutubeIcon } from "lucide-react";
 import { Newspaper } from "lucide-react";
 import { ImageIcon } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 export default function Projects() {
   const projects = [
@@ -27,6 +28,22 @@ export default function Projects() {
       githubLink: 'https://github.com/audsostrom/brainrot-hackathon',
       devpostLink: 'https://devpost.com/software/fizzbruzz',
     },*/
+    {
+      title: "Causeway",
+      description: "An application for learning web development through micro-role based hierarchies.",
+      date: "Jun 2024 - Present",
+      builtWith: "Built with Angular, NgRx, and Firebase",
+      images: [
+        "/causeway-title.png",
+        "/causeway-dashboard.png",
+        "/causeway-guide.png",
+        "/causeway-code-editor.png",
+      ],
+      badges: ["Front-end Development"],
+      type: 'mobile',
+      siteLink: 'https://tech4good-causeway.web.app/',
+      paperLink: 'https://ucsc-ospo.github.io/report/osre24/ucsc/causeway/20240620-audsostrom/'
+    },
     {
       title: "Flora Fit",
       description: "An adventure app that inspires exploration, environmental awareness, and mental wellness. As players travel in nature, they're encouraged to reflect and engage with their world around them with tailored journal prompts using Gemini. When they do so, they given seeds which they can then grow and evolve to learn more about plants indigenous to the player's area and what invasive species are nearby.",
@@ -47,21 +64,22 @@ export default function Projects() {
     },
     {
       title: "DishDelish",
-      description: "Never let food go to waste again.",
+      description: "Never let food go to waste again. Using the ingredients you already have, you're matched with recipes that best match your pantry and preferences using AI to augment results.",
       date: "Jan - May 2024",
-      builtWith: "Built with Next.JS, MongoDB, and Material UI using open-source HuggingFace AI models.",
+      builtWith: "Built with Next.JS, MongoDB, Material UI, and HuggingFace AI.",
       images: [
         "/dishdelish.png",
         "/recipe.png",
       ],
       badges: ["Back-end Engineering", "UI/UX Design"],
       type: 'desktop',
+      siteLink: 'https://dishdelish.vercel.app/',
       figmaLink: 'https://www.figma.com/file/OfIogM0BU2t5Mtn3DQ9ZJ9/DishDelish-Figma?type=design&node-id=0%3A1&mode=design&t=0iplRGkv9s0KNw9u-1',
       githubLink: 'https://github.com/audsostrom/dishdelish',
     },
     {
-      title: "CNN For Mice Sleep Analysis",
-      description: "Predictor for sleep stages in mice using convolutional neural networks (CNNs), based on datasets of EEG and EMG data collected at Zuo Labs.",
+      title: "CNNs and RNNs For Mice Sleep Analysis",
+      description: "Predictors for sleep stages in mice using convolutional neural networks (CNNs) and recurrent neural networks (RNNs), based on datasets of EEG and EMG data collected at Zuo Labs.",
       date: "Mar - Jun 2023",
       builtWith: "Built in Python using PyTorch, Pandas, and Tkinter.",
       images: [
@@ -131,6 +149,9 @@ export default function Projects() {
               <div className="my-6 mx-20">
                 <div className="flex items-center gap-3 flex-wrap">
                   <h2 className="text-2xl font-bold">{project.title}</h2>
+                  {project.siteLink && <Link  href={project.siteLink} rel="noopener noreferrer" target="_blank">
+      <ExternalLink className='size-5'/>
+        </Link>}
                   {project.githubLink && <Link href={project.githubLink} rel="noopener noreferrer" target="_blank">
       <GitHubLogoIcon className='size-5'/>
         </Link>}
@@ -143,6 +164,7 @@ export default function Projects() {
         {/** project.devpostLink && <Link  href={project.devpostLink} rel="noopener noreferrer" target="_blank">
       <Crown className='size-5'/>
         </Link> */}
+            
         {project.paperLink && <Link  href={project.paperLink} rel="noopener noreferrer" target="_blank">
       <Newspaper className='size-5'/>
         </Link>}
@@ -171,7 +193,6 @@ export default function Projects() {
           </Card>
           </div>
         ))}
-        <div className="text-xs text-center italic pt-16">And this website was built with Next.js, Tailwind, Radix UI, and Shadcn!</div>
       </div>
     </div>
   );
