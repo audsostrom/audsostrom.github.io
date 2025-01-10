@@ -32,7 +32,7 @@ export default function Projects() {
       title: "Causeway",
       description: "An application for learning web development through micro-role based hierarchies.",
       date: "Jun 2024 - Present",
-      builtWith: "Built with Angular, NgRx, and Firebase",
+      builtWith: "Built with Angular, NgRx, and Firebase.",
       images: [
         "/causeway-title.png",
         "/causeway-dashboard.png",
@@ -116,7 +116,7 @@ export default function Projects() {
       title: "What Makes a Masterpiece?",
       description: "Writing sample covering the use of AI for generating art and its impact on society.",
       date: "May 2023",
-      builtWith: "Submitted for techincal writing capstone course.",
+      builtWith: "Submitted for technical writing capstone course.",
       images: [
         "/CSE_185_Final_Poster.png",
       ],
