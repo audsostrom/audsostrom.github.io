@@ -1,4 +1,4 @@
-import { Badge, Card } from "@radix-ui/themes";
+import { Badge, Card, Link } from "@radix-ui/themes";
 import Image from "next/image";
 import {
   Carousel,
@@ -7,23 +7,30 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"; // Make sure to import the correct components
+import { FigmaLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
+import { YoutubeIcon } from "lucide-react";
+import { Crown } from "lucide-react";
+import { Newspaper } from "lucide-react";
+import { ImageIcon } from "lucide-react";
 
 export default function Projects() {
   const projects = [
-    {
+    /** {
       title: "FizzBruzz",
       description: "Make coding courses easier with everything in one place and a dash of brain rot.",
-      date: "Nov 2024, submitted for Brainrot Hackathon",
+      date: "Nov 2024, won top 5 community vote in BR hackathon against 1200+ participants",
       builtWith: "Built with Next.JS, MongoDB, TailwindCSS, and Radix UI using open-source HuggingFace AI models.",
       images: [
        "/fizzbruzz.png",
       ],
       badges: ["Full-stack Development"],
       type: 'desktop',
-    },
+      githubLink: 'https://github.com/audsostrom/brainrot-hackathon',
+      devpostLink: 'https://devpost.com/software/fizzbruzz',
+    },*/
     {
       title: "Flora Fit",
-      description: "Pokemon Go-inspired app to get people to learn more about the environment and be more cognizant of their mental health.",
+      description: "An adventure app that inspires exploration, environmental awareness, and mental wellness. As players travel in nature, they're encouraged to reflect and engage with their world around them with tailored journal prompts using Gemini. When they do so, they given seeds which they can then grow and evolve to learn more about plants indigenous to the player's area and what invasive species are nearby.",
       date: "Apr 2024, submitted for LA Hacks",
       builtWith: "Built with React Native, Firebase, and Google Gemini.",
       images: [
@@ -35,6 +42,9 @@ export default function Projects() {
       ],
       badges: ["Full-stack Development", "UI/UX Design"],
       type: 'mobile',
+      githubLink: 'https://github.com/LAHacks2024/FloraFit',
+      figmaLink: 'https://www.figma.com/design/znQMf3sQG5IyTKSn0B6J7u/Flora-Fit-Figma?node-id=0-1&t=7Y1kREYfFo3zxHcs-1',
+      youtubeLink: 'https://youtu.be/zV-ObX7yRm8',
     },
     {
       title: "DishDelish",
@@ -47,6 +57,8 @@ export default function Projects() {
       ],
       badges: ["Back-end Engineering", "UI/UX Design"],
       type: 'desktop',
+      figmaLink: 'https://www.figma.com/file/OfIogM0BU2t5Mtn3DQ9ZJ9/DishDelish-Figma?type=design&node-id=0%3A1&mode=design&t=0iplRGkv9s0KNw9u-1',
+      githubLink: 'https://github.com/audsostrom/dishdelish',
     },
     {
       title: "CNN For Mice Sleep Analysis",
@@ -60,6 +72,21 @@ export default function Projects() {
       ],
       badges: ["Data Science"],
       type: 'desktop',
+      githubLink: 'https://github.com/audsostrom/mice-sleep-analysis',
+      paperLink: 'https://github.com/audsostrom/mice-sleep-analysis/blob/main/Final_Report.pdf'
+    },
+    {
+      title: "What Makes a Masterpiece?",
+      description: "Writing sample covering the use of AI for generating art and its impact on society.",
+      date: "May 2023",
+      builtWith: "Submitted for techincal writing capstone course.",
+      images: [
+        "/CSE_185_Final_Poster.png",
+      ],
+      badges: ["Technical Writing"],
+      type: 'desktop',
+      imageLink: '/CSE_185_Final_Poster.png',
+      paperLink: '/CSE_185_Final_Paper.pdf',
     },
   ];
 
@@ -78,9 +105,8 @@ export default function Projects() {
       </div>
       <div className="space-y-8 mb-24">
         {projects.map((project, index) => (
-          <div key={index} className={`flex flex-wrap mb-24 gap-8 flex-col lg:flex-row`}>
-                        {/* Shadcn Carousel for Images */}
-                        <Carousel className='mx-16 lg:w-2/5' opts={{
+          <div key={index} className={`flex mb-24 gap-8 flex-col xl:flex-row`}>
+                        <Carousel className='mx-16 xl:w-2/5' opts={{
     loop: true,
   }}>
                   <CarouselContent className="h-96 w-auto">
@@ -101,12 +127,33 @@ export default function Projects() {
             key={index}
             size="1"
             variant="surface"
-            className='flex flex-row items-center lg:w-1/2'
+            className='flex flex-row items-center xl:w-1/2'
           >
               <div className="my-6 mx-20">
-                <div className="flex items-center gap-4 flex-wrap">
+                <div className="flex items-center gap-3 flex-wrap">
                   <h2 className="text-2xl font-bold">{project.title}</h2>
-                  {project.badges.map((badge, badgeIndex) => (
+                  {project.githubLink && <Link href={project.githubLink} rel="noopener noreferrer" target="_blank">
+      <GitHubLogoIcon className='size-5'/>
+        </Link>}
+        {project.figmaLink && <Link  href={project.figmaLink} rel="noopener noreferrer" target="_blank">
+      <FigmaLogoIcon className='size-5'/>
+        </Link>}
+        {project.youtubeLink && <Link  href={project.youtubeLink} rel="noopener noreferrer" target="_blank">
+      <YoutubeIcon className='size-5'/>
+        </Link>}
+        {project.devpostLink && <Link  href={project.devpostLink} rel="noopener noreferrer" target="_blank">
+      <Crown className='size-5'/>
+        </Link>}
+        {project.paperLink && <Link  href={project.paperLink} rel="noopener noreferrer" target="_blank">
+      <Newspaper className='size-5'/>
+        </Link>}
+        {project.imageLink && <Link  href={project.imageLink} rel="noopener noreferrer" target="_blank">
+      <ImageIcon className='size-5'/>
+        </Link>}
+        
+                </div>
+                <div className="flex items-center gap-2 my-2 flex-wrap">
+                {project.badges.map((badge, badgeIndex) => (
                     <Badge
                       key={badgeIndex}
                       color={badgeIndex % 2 === 0 ? "plum" : "cyan"}
@@ -115,10 +162,11 @@ export default function Projects() {
                     </Badge>
                   ))}
                 </div>
+
                 <p className="text-gray-400 mt-1">{project.date}</p>
                 <div className="flex flex-col gap-2 mt-4">
                   <p className="text-gray-400">{project.description}</p>
-                  <p className="text-gray-400">{project.builtWith}</p>
+                  <p className="text-gray-400 mt-2">{project.builtWith}</p>
                 </div>
               </div>
           </Card>
