@@ -40,7 +40,7 @@ export default function Projects() {
         "/causeway-code-editor.png",
       ],
       badges: ["Front-end Development"],
-      type: 'mobile',
+      type: 'desktop',
       siteLink: 'https://tech4good-causeway.web.app/',
       paperLink: 'https://ucsc-ospo.github.io/report/osre24/ucsc/causeway/20240620-audsostrom/'
     },
