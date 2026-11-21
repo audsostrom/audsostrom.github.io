@@ -1,9 +1,9 @@
 import type { NextConfig } from "next";
 
+// Static export for GitHub Pages. No basePath: this is a user-pages repo served at the domain root
+// (actions/configure-pages also injects the correct basePath in CI).
 const nextConfig: NextConfig = {
-  /* config options here */
-  output: "export",  // <=== enables static exports
-  basePath: "/audsostrom.github.io",
+  output: "export",
   reactStrictMode: true,
   images: {
     unoptimized: true,

@@ -1,109 +1,38 @@
-@import "@radix-ui/themes/styles.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-.radix-themes {
-	--default-font-family: var(--font-inter);
-  --background: none; /* Override Radix's background variable */
-}
-
-body {
-  color: var(--foreground);
-}
-
-@keyframes wave {
-  0% {
-    transform: rotate(0deg);
+@layer base {
+  html {
+    background: #ffffff;
   }
-  10% {
-    transform: rotate(14deg);
+  body {
+    @apply bg-bg font-body text-ink antialiased;
   }
-  20% {
-    transform: rotate(-8deg);
+  a {
+    @apply text-accent underline decoration-1 underline-offset-[3px] hover:text-accent-hover;
   }
-  30% {
-    transform: rotate(14deg);
-  }
-  40% {
-    transform: rotate(-4deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  100% {
-    transform: rotate(0deg);
+  :focus-visible {
+    outline: 3px solid #b9b1e6;
+    outline-offset: 2px;
   }
 }
 
-@keyframes anim {
-  0% {
-    background-position: 0% 50%;
+@layer components {
+  .eyebrow {
+    @apply text-[13px] font-bold uppercase tracking-[0.06em];
   }
-  25% {
-    background-position: 25% 50%;
+  /* Pills/chips: links that look like buttons, no underline. */
+  /* 32px visual height; the ::after extends the touch target to 44px. */
+  .pill {
+    @apply relative inline-flex min-h-[32px] items-center rounded-full px-3 text-[13px] font-bold no-underline;
   }
-  50% {
-    background-position: 50% 50%;
+  .pill::after {
+    content: "";
+    position: absolute;
+    inset: -6px 0;
   }
-  75% {
-    background-position: 75% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.wave {
-  display: inline-block;
-  transform-origin: 70% 70%; /* Pivot point for waving effect */
-  animation: wave 4s ease-in-out infinite; /* Longer duration for smoother wave */
-}
-
-/* Binder Paper Animation */
-.binder-paper {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, #f3f3f3 90%, transparent 90.5%);
-  background-size: 100% 40px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  transform: translateY(-100%);
-  animation: slide-in 2s forwards;
-}
-
-@keyframes slide-in {
-  to {
-    transform: translateY(0);
-  }
-}
-
-/* Handwriting Effect */
-.handwriting-animation {
-  font-family: "Dancing Script", cursive;
-  font-size: 4rem;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid transparent;
-  animation: typing 3s steps(30, end), blink 0.5s step-end infinite alternate;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink {
-  from {
-    border-right-color: transparent;
-  }
-  to {
-    border-right-color: purple;
+  .btn {
+    @apply inline-flex min-h-[44px] items-center gap-2 rounded-xl px-[18px] text-[15px] font-bold no-underline;
   }
 }
