@@ -116,7 +116,7 @@ export const publications: Publication[] = [
     authors: [{ name: "Audrey Ostrom", me: true }, { name: "Madison Gruender" }, { name: "David T. Lee" }],
     image: { src: "/research/asee26-course-microroles.jpg", alt: "A course organized into micro-roles across homework phases", position: "top left" },
     links: [
-      { label: "DOI", href: "https://doi.org/10.18260/1-2--60393" },
+      { label: "DOI", href: "https://peer.asee.org/scaling-experiential-learning-using-micro-role-based-structures-to-model-education-after-the-workplace-iuse" },
       { label: "PDF", href: "#" },
     ],
   },
