@@ -47,15 +47,15 @@ export const news: NewsItem[] = [
     year: 2026,
     label: "Jun",
     kind: "pub",
-    text: "“Scaling Experiential Learning” paper published at **ASEE 2026**.",
-    link: { label: "Paper", href: "https://doi.org/10.18260/1-2--60393" },
+    text: "Presented “Scaling Experiential Learning” at **ASEE 2026** in Charlotte, North Carolina.",
+    link: { label: "Paper", href: "https://peer.asee.org/scaling-experiential-learning-using-micro-role-based-structures-to-model-education-after-the-workplace-iuse" },
   },
   { year: 2026, label: "Summer", kind: "award", text: "Awarded the **Summer Computational Media Department Fellowship**." },
   {
     year: 2026,
     label: "Apr",
     kind: "pub",
-    text: "Presented “Bringing On-the-Job Learning into Education” at **CHI 2026** in Barcelona.",
+    text: "Presented “Bringing On-the-Job Learning into Education” at **CHI 2026** in Barcelona, Spain.",
     link: { label: "Paper", href: "https://doi.org/10.1145/3772363.3798957" },
   },
   {
