@@ -58,7 +58,7 @@ export default function PubEntry({ pub }: { pub: Publication }) {
           <ul className="m-0 flex list-none flex-wrap gap-x-[18px] gap-y-1 p-0 text-[14px] font-bold">
             {links.map((l) => (
               <li key={l.label}>
-                <a href={l.href} className="inline-flex min-h-[32px] items-center" rel="noopener noreferrer">
+                <a href={l.href} className="inline-flex min-h-[32px] items-center" target="_blank" rel="noopener noreferrer">
                   {l.label}
                 </a>
               </li>

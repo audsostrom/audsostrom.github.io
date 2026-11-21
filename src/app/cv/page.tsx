@@ -27,7 +27,7 @@ export default function CvPage() {
             Highlights below; publications are on the <Link href="/research">Research</Link> page.
           </p>
         </div>
-        <a href={cvPdf} className="btn bg-accent text-white hover:bg-accent-hover hover:text-white">
+        <a href={cvPdf} target="_blank" rel="noopener noreferrer" className="btn bg-accent text-white hover:bg-accent-hover hover:text-white">
           Download CV (PDF)
         </a>
       </section>

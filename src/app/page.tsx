@@ -17,7 +17,6 @@ const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: profile.name,
-  email: `mailto:${profile.email}`,
   jobTitle: "PhD Student, Computational Media",
   description: profile.tagline.before + profile.tagline.highlight + profile.tagline.after,
   affiliation: {
@@ -45,9 +44,7 @@ export default function Home() {
         <div className="flex flex-col items-start gap-4">
           <Headshot />
           <div className="flex flex-col gap-1 text-[15px] leading-[1.5]">
-            <a href={`mailto:${profile.email}`} className="font-bold">
-              {profile.email}
-            </a>
+            <span className="font-bold">{profile.email}</span>
             <span className="text-muted">{profile.location}</span>
           </div>
           <IconLinks />
@@ -68,7 +65,7 @@ export default function Home() {
           <p className="m-0 text-[17px] leading-[1.7] text-ink-2">
             {bio.map((seg) =>
               seg.href ? (
-                <a key={seg.text} href={seg.href} rel="noopener noreferrer">
+                <a key={seg.text} href={seg.href} target="_blank" rel="noopener noreferrer">
                   {seg.text}
                 </a>
               ) : (

@@ -29,7 +29,7 @@ export default function IconLinks() {
                 {icon}
               </Link>
             ) : (
-              <a href={l.href} aria-label={l.label} title={l.label} className={cls} rel="noopener noreferrer">
+              <a href={l.href} aria-label={l.label} title={l.label} className={cls} target="_blank" rel="noopener noreferrer">
                 {icon}
               </a>
             )}

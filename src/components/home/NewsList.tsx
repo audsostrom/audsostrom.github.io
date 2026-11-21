@@ -23,7 +23,7 @@ function Rail({ items, showYear }: { items: NewsItem[]; showYear: boolean }) {
             {n.link && (
               <>
                 {" "}
-                <a href={n.link.href} rel="noopener noreferrer">
+                <a href={n.link.href} target="_blank" rel="noopener noreferrer">
                   {n.link.label}
                 </a>
               </>

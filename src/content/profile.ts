@@ -23,11 +23,11 @@ export const profile = {
   seeking: {
     areasLabel: "Research areas",
     areas: ["HCI", "EdTech", "Human–AI collaboration"],
-    ask: { before: "Looking for ", bold: "Summer 2027 research internships", after: "." },
+    ask: { before: "Looking for ", bold: "Summer 2027 internships", after: "." },
   },
-  email: "aostrom@ucsc.edu",
+  email: "aostrom [at] ucsc [dot] edu",
   location: "Santa Cruz, CA",
-  headshot: { src: "/headshot_ucsc.png", alt: "Audrey Ostrom" }, // [HEADSHOT — add file]
+  headshot: { src: "/headshot_ucsc.png", alt: "Audrey Ostrom" },
   // Icon links under the headshot (email is shown as text above them, not as an icon).
   links: [
     { label: "CV", href: "/cv", icon: "cv" },

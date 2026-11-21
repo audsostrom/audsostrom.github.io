@@ -48,7 +48,7 @@ export default function ThreadCard({ thread: t }: { thread: Thread }) {
                 {p.label}
               </Link>
             ) : (
-              <a key={p.label} href={p.href} className={PRIMARY} rel="noopener noreferrer">
+              <a key={p.label} href={p.href} className={PRIMARY} target="_blank" rel="noopener noreferrer">
                 {p.label}
               </a>
             )

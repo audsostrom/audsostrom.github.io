@@ -47,11 +47,11 @@ export default function ResearchPage() {
         </h1>
         <p className="mb-7 mt-0 text-[16px] text-muted">
           Papers, posters, and demos. * equal contribution · Also on{" "}
-          <a href={link("scholar")} rel="noopener noreferrer">
+          <a href={link("scholar")} target="_blank" rel="noopener noreferrer">
             Google Scholar
           </a>{" "}
           and{" "}
-          <a href={link("orcid")} rel="noopener noreferrer">
+          <a href={link("orcid")} target="_blank" rel="noopener noreferrer">
             ORCID
           </a>
         </p>

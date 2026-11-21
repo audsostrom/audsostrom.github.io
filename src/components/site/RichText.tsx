@@ -16,7 +16,7 @@ export default function RichText({ text, boldClassName }: { text: string; boldCl
       );
     } else {
       out.push(
-        <a key={m.index} href={m[3]} rel="noopener noreferrer">
+        <a key={m.index} href={m[3]} target="_blank" rel="noopener noreferrer">
           {m[2]}
         </a>
       );
